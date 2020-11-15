@@ -95,7 +95,7 @@ cram_md5_challenge (CamelSasl *sasl, GByteArray *token, CamelException *ex)
 	GByteArray *ret = NULL;
 	guchar ipad[64];
 	guchar opad[64];
-	MD5Context ctx;
+	tm_MD5Context ctx;
 	int i, pw_len;
 
 	/* Need to wait for the server */

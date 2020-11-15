@@ -7,7 +7,6 @@ SUBDIRS += libtinymailui
 
 if BUILD_GNOME
 SUBDIRS += libtinymailui-gnome-keyring
-SUBDIRS += libtinymail-gnomevfs 
 endif
 
 if BUILD_UIGTK
@@ -27,7 +26,6 @@ SUBDIRS += libtinymailui-gtkhtml
 endif
 
 if BUILD_MAEMO
-SUBDIRS += libtinymail-gnomevfs
 endif
 
 SUBDIRS += libtinymail-camel $(PLATFORMDIR) 
@@ -71,7 +69,6 @@ endif
 DIST_SUBDIRS = \
 	libtinymail \
 	libtinymailui \
-	libtinymail-gnomevfs \
 	libtinymailui-gtk \
 	libtinymail-camel \
 	docs \

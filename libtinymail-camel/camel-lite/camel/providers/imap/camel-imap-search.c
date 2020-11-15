@@ -178,7 +178,7 @@ camel_imap_search_new (const char *cachedir)
 static void
 hash_match(char hash[17], int argc, struct _ESExpResult **argv)
 {
-	MD5Context ctx;
+	tm_MD5Context ctx;
 	unsigned char digest[16];
 	int state = 0, save = 0;
 	int i;
