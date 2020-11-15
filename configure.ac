@@ -408,24 +408,24 @@ fi
 AC_SUBST(LIBTINYMAIL_TP_CFLAGS)
 AC_SUBST(LIBTINYMAIL_TP_LIBS)
 
-dnl ### libtinymail-gnomevfs, a tnystreamiface for gnome-vfs ##
-if test x$build_gnome = xtrue; then
-extragtkpkgs="libgnomeui-2.0 gnome-keyring-1"
-extratnypkgs="gnome-vfs-2.0"
-  PKG_CHECK_MODULES(LIBTINYMAIL_GNOMEVFS, glib-2.0 >= 2.8 gobject-2.0 gnome-vfs-2.0)
-elif test x$build_maemo = xtrue; then
-extragtkpkgs=
-extratnypkgs="gnome-vfs-2.0"
-  PKG_CHECK_MODULES(LIBTINYMAIL_GNOMEVFS, glib-2.0 >= 2.8 gobject-2.0 gnome-vfs-2.0)
-else
-  LIBTINYMAIL_GNOMEVFS_CFLAGS=
-  LIBTINYMAIL_GNOMEVFS_LIBS=
-  extragtkpkgs=
-  extratnypkgs=
-fi
+#dnl ### libtinymail-gnomevfs, a tnystreamiface for gnome-vfs ##
+#if test x$build_gnome = xtrue; then
+#extragtkpkgs="libgnomeui-2.0 gnome-keyring-1"
+#extratnypkgs="gnome-vfs-2.0"
+#  PKG_CHECK_MODULES(LIBTINYMAIL_GNOMEVFS, glib-2.0 >= 2.8 gobject-2.0 gnome-vfs-2.0)
+#elif test x$build_maemo = xtrue; then
+#extragtkpkgs=
+#extratnypkgs="gnome-vfs-2.0"
+#  PKG_CHECK_MODULES(LIBTINYMAIL_GNOMEVFS, glib-2.0 >= 2.8 gobject-2.0 gnome-vfs-2.0)
+#else
+#  LIBTINYMAIL_GNOMEVFS_CFLAGS=
+#  LIBTINYMAIL_GNOMEVFS_LIBS=
+#  extragtkpkgs=
+#  extratnypkgs=
+#fi
 
-AC_SUBST(LIBTINYMAIL_GNOMEVFS_CFLAGS)
-AC_SUBST(LIBTINYMAIL_GNOMEVFS_LIBS)
+#AC_SUBST(LIBTINYMAIL_GNOMEVFS_CFLAGS)
+#AC_SUBST(LIBTINYMAIL_GNOMEVFS_LIBS)
 
 dnl ### libtinymailui-gtk, a gtk+ implementation of libtinymail-ui ##
 if test x$build_uigtk = xtrue; then
@@ -631,8 +631,6 @@ libtinymailui-gtkhtml/libtinymailui-gtkhtml.pc
 libtinymailui-mozembed/Makefile
 libtinymailui-mozembed/libtinymailui-mozembed.pc
 libtinymailui-gnome-keyring/Makefile
-libtinymail-gnomevfs/Makefile
-libtinymail-gnomevfs/libtinymail-gnomevfs.pc
 libtinymail-gnome-desktop/Makefile
 libtinymail-gnome-desktop/libtinymail-gnome-desktop.pc
 libtinymail-olpc/Makefile
@@ -654,6 +652,12 @@ tests/vala-demo/Makefile
 tests/dotnet-demo/build.sh
 m4/Makefile
 ])
+
+#libtinymailui-gnome-keyring/Makefile
+#libtinymail-gnomevfs/Makefile
+#libtinymail-gnomevfs/libtinymail-gnomevfs.pc
+#libtinymail-gnome-desktop/Makefile
+
 
 echo ""
 echo "The following options are selected:"
